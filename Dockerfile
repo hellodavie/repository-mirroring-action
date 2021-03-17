@@ -1,7 +1,4 @@
-FROM alpine:3.10
-
-RUN apk update && apk upgrade && \
-    apk add --no-cache git openssh
+FROM alpine/git:latest
 
 COPY mirror.sh /mirror.sh
 COPY setup-ssh.sh /setup-ssh.sh
